@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>list</h1>
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>text</td>
+            </tr>
+            {% for row in list %}
+                <tr>
+                    {% for col in row %}
+                    <td>{{col}}</td>
+                    {% endfor %}
+                    <td><a href="/modMSG?msgId={{row[0]}}">수정</a></td>
+                    <td><a href="/delMSG?msgId={{row[0]}}">삭제</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="/addMSG">메세지 입력</a>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>
+            <form action="/modMSG" method="POST">
+                <input type="hidden" name="msgId" value="{{msgList[0]}}">
+                <div>
+                    Text: <textarea name="msgText">{{msgList[1]}}</textarea>
+                </div>
+                <button type="submit">메세지 입력</button>
+            </form>
+        </h1>
+    </body>
+</html>
